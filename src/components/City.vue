@@ -13,7 +13,7 @@
 <style>
 	#city_title{
 		text-align: center;
-		font-size: 20px;
+		font-size: 25px;
 		padding-top: 8%;
 	}
 </style>

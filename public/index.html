@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pronotico Resistencia</title>
+    <title>Clima en Resistencia</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -16,7 +16,14 @@
       #attribution{
         text-align: center;
         font-size: 11px;
-        margin-top: 32%;
+        position: absolute;
+        bottom: 2%;
+        margin-left: 2%;
+      }
+      @media (max-width: 731px){
+        #attribution{
+          margin-left: 10%;
+        }
       }
     </style>
 
@@ -24,9 +31,11 @@
   <body class="row justify-content-center align-items-center vh-100" style="width: 100%; background-color: white;">
     <div id="container" class="mx-auto rounded">
         <div id="app"></div>
-        <div id="attribution" class="text-muted">
-          Iconos diseñados por <a href="https://www.flaticon.es/autores/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a>
-        </div>
+        <footer class="container">
+            <div id="attribution" class="text-muted">
+            Iconos diseñados por <a href="https://www.flaticon.es/autores/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a>
+          </div>
+        </footer>
     </div>
   </body>
 </html>

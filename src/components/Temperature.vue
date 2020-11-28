@@ -13,21 +13,27 @@
 
 <script>
 	import axios from 'axios';
-	import image_despejado from './assets_components/despejado.svg'
+	import imageDespejado from './assets_components/despejado.svg'
+	import imagenNublado from './assets_components/nublado.svg'
 
-	//esta funcion devuelve la imagen a mostrar
-	const image_state = state => {
-		if (state == 'Despejado') {
-			return image_despejado
+
+	const stringConverterToInt = string => parseInt(string);
+
+	//traduzco lo que significa cada estado del clima
+	const stateTranslated = string => {
+		if (string == "Clear") {
+			return "Despejado"
+		}else if (string == "Clouds") {
+			return "Nublado"
 		}
 	}
 
-	const string_converter_to_int = string => parseInt(string);
-
-	//traduzco lo que significa cada estado del clima
-	const state_translated = string => {
-		if (string == "Clear") {
-			return "Despejado"
+	//esta funcion devuelve la imagen a mostrar
+	const imageState = state => {
+		if (state == 'Despejado') {
+			return imageDespejado
+		}else if (state == "Nublado") {
+			return imagenNublado
 		}
 	}
 
@@ -35,7 +41,7 @@
 		name: 'Temperature',
 		data(){
 			return{
-				image_state: "",
+				image: "",
 				temperature: "",
 				state: ""
 			}
@@ -44,9 +50,9 @@
 			axios
 				.get('http://fcc-weather-api.glitch.me/api/current?lat=-27.440808&lon=-59.009453')
 				.then(respuesta => {
-					this.temperature = string_converter_to_int(respuesta.data.main.temp);
-					this.state = state_translated(respuesta.data.weather[0].main);
-					this.imagen = image_state(this.state);
+					this.temperature = stringConverterToInt(respuesta.data.main.temp);
+					this.state = stateTranslated(respuesta.data.weather[0].main);
+					this.imagen = imageState(this.state);
 				})
 		}
 	}
