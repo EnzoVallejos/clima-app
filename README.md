@@ -1,24 +1,5 @@
-# pronostico-app
+# App del clima en Resistencia
 
-## Project setup
-```
-npm install
-```
+Esta es una sencilla app realizada en Vue.js 3 y utilizando la API de FreeCodeCamp, realizada solo con fines didacticos para aprender a usar este framework. 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Cabe decir que para esta app solo se desarrollo el frontend, ya que el backend se usa mediante una api de FreeCodeCamp.
