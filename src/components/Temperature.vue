@@ -15,6 +15,7 @@
 	import axios from 'axios';
 	import imageDespejado from './assets_components/despejado.svg'
 	import imagenNublado from './assets_components/nublado.svg'
+	import imagenLLuvia from './assets_components/lluvia.svg'
 
 
 	const stringConverterToInt = string => parseInt(string);
@@ -25,6 +26,8 @@
 			return "Despejado"
 		}else if (string == "Clouds") {
 			return "Nublado"
+		}else if (string == "Rain") {
+			return "Lluvia"
 		}
 	}
 
@@ -34,6 +37,8 @@
 			return imageDespejado
 		}else if (state == "Nublado") {
 			return imagenNublado
+		}else if (state == "Lluvia") {
+			return imagenLLuvia
 		}
 	}
 
