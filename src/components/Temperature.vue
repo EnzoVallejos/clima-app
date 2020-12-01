@@ -12,6 +12,7 @@
 </template>
 
 <script>
+	import axios from 'axios';
 	import imageDespejado from './assets_components/despejado.svg'
 	import imagenNublado from './assets_components/nublado.svg'
 	import imagenLLuvia from './assets_components/lluvia.svg'
@@ -45,19 +46,19 @@
 		name: 'Temperature',
 		data(){
 			return{
-				image: [],
-				temperature: [],
-				state: []
+				image: "",
+				temperature: "",
+				state: ""
 			}
 		},
 		mounted () {
-			fetch('http://fcc-weather-api.glitch.me/api/current?lat=-27.440808&lon=-59.009453')
-			.then(respuesta => respuesta.json())
-			.then(datos => {
-				this.temperature = stringConverterToInt(datos.["main"].["temp"]);
-				this.state = stateTranslated(datos["weather"][0]["main"]);
-				this.imagen = imageState(this.state);
-			})
+			axios
+				.get('http://fcc-weather-api.glitch.me/api/current?lat=-27.440808&lon=-59.009453')
+				.then(respuesta => {
+					this.temperature = stringConverterToInt(respuesta.data.main.temp);
+					this.state = stateTranslated(respuesta.data.weather[0].main);
+					this.imagen = imageState(this.state);
+				})
 		}
 	}
 </script>
