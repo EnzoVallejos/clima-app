@@ -46,9 +46,9 @@
 		name: 'Temperature',
 		data(){
 			return{
-				image: "",
-				temperature: "",
-				state: ""
+				image: [],
+				temperature: [],
+				state: []
 			}
 		},
 		mounted () {
