@@ -1,5 +1,6 @@
-# App del clima en Resistencia
+<h2 align="center">App del clima en Resistencia</h2>
 
+[![license](https://img.shields.io/github/license/EnzoVallejos/clima-app)](https://github.com/EnzoVallejos/clima-app/blob/master/LICENSE.md)
 <p align="center"><img src="https://github.com/EnzoVallejos/clima-app/blob/master/assets_readme/screenshot_page.jpg"></p>
 
 Esta es una sencilla app realizada en Vue.js 3 y utilizando la API de FreeCodeCamp, realizada solo con fines didácticos para aprender a usar este framework. 
